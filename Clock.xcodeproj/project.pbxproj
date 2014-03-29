@@ -1,0 +1,368 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1808C35918C75A13008C96A0 /* DataSave.m in Sources */ = {isa = PBXBuildFile; fileRef = 1808C35818C75A13008C96A0 /* DataSave.m */; };
+		1815F70E18BF907C002BF5A1 /* MusicCtl.m in Sources */ = {isa = PBXBuildFile; fileRef = 1815F70D18BF907C002BF5A1 /* MusicCtl.m */; };
+		182B1DBD18BB87C30049158C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 182B1DBC18BB87C30049158C /* AVFoundation.framework */; };
+		188EB2CB18C2E075002C7989 /* Add.png in Resources */ = {isa = PBXBuildFile; fileRef = 188EB2CA18C2E075002C7989 /* Add.png */; };
+		188EB2CE18C2E07D002C7989 /* Frist.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 188EB2CC18C2E07D002C7989 /* Frist.mp3 */; };
+		188EB2CF18C2E07D002C7989 /* Second.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 188EB2CD18C2E07D002C7989 /* Second.mp3 */; };
+		18FB26F918B994210051C98B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18FB26F818B994210051C98B /* UIKit.framework */; };
+		18FB26FB18B994210051C98B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18FB26FA18B994210051C98B /* Foundation.framework */; };
+		18FB26FD18B994210051C98B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18FB26FC18B994210051C98B /* CoreGraphics.framework */; };
+		18FB270318B994210051C98B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18FB270118B994210051C98B /* InfoPlist.strings */; };
+		18FB270518B994210051C98B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FB270418B994210051C98B /* main.m */; };
+		18FB270918B994210051C98B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FB270818B994210051C98B /* AppDelegate.m */; };
+		18FB270B18B994210051C98B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FB270A18B994210051C98B /* Default.png */; };
+		18FB270D18B994210051C98B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FB270C18B994210051C98B /* Default@2x.png */; };
+		18FB270F18B994210051C98B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FB270E18B994210051C98B /* Default-568h@2x.png */; };
+		18FB271218B994210051C98B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FB271118B994210051C98B /* ViewController.m */; };
+		18FB271518B994210051C98B /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18FB271318B994210051C98B /* ViewController.xib */; };
+		18FB271C18B9A8030051C98B /* AddClock.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18FB271B18B9A8030051C98B /* AddClock.xib */; };
+		18FB271F18B9A8230051C98B /* AddClockCtl.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FB271E18B9A8230051C98B /* AddClockCtl.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1808C35718C75A13008C96A0 /* DataSave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSave.h; sourceTree = "<group>"; };
+		1808C35818C75A13008C96A0 /* DataSave.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSave.m; sourceTree = "<group>"; };
+		1815F70C18BF906C002BF5A1 /* MusicCtl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicCtl.h; sourceTree = "<group>"; };
+		1815F70D18BF907C002BF5A1 /* MusicCtl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicCtl.m; sourceTree = "<group>"; };
+		182B1DBC18BB87C30049158C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		188EB2CA18C2E075002C7989 /* Add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Add.png; path = Resource/Add.png; sourceTree = "<group>"; };
+		188EB2CC18C2E07D002C7989 /* Frist.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Frist.mp3; path = Resource/Frist.mp3; sourceTree = "<group>"; };
+		188EB2CD18C2E07D002C7989 /* Second.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Second.mp3; path = Resource/Second.mp3; sourceTree = "<group>"; };
+		18FB26F518B994210051C98B /* Clock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18FB26F818B994210051C98B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		18FB26FA18B994210051C98B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		18FB26FC18B994210051C98B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		18FB270018B994210051C98B /* Clock-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Clock-Info.plist"; sourceTree = "<group>"; };
+		18FB270218B994210051C98B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		18FB270418B994210051C98B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		18FB270618B994210051C98B /* Clock-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Clock-Prefix.pch"; sourceTree = "<group>"; };
+		18FB270718B994210051C98B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		18FB270818B994210051C98B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		18FB270A18B994210051C98B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		18FB270C18B994210051C98B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		18FB270E18B994210051C98B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		18FB271018B994210051C98B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		18FB271118B994210051C98B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		18FB271418B994210051C98B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		18FB271B18B9A8030051C98B /* AddClock.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddClock.xib; sourceTree = "<group>"; };
+		18FB271D18B9A8230051C98B /* AddClockCtl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddClockCtl.h; sourceTree = "<group>"; };
+		18FB271E18B9A8230051C98B /* AddClockCtl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddClockCtl.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18FB26F218B994210051C98B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				182B1DBD18BB87C30049158C /* AVFoundation.framework in Frameworks */,
+				18FB26F918B994210051C98B /* UIKit.framework in Frameworks */,
+				18FB26FB18B994210051C98B /* Foundation.framework in Frameworks */,
+				18FB26FD18B994210051C98B /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1808C35A18C75C39008C96A0 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				188EB2CA18C2E075002C7989 /* Add.png */,
+				188EB2CD18C2E07D002C7989 /* Second.mp3 */,
+				188EB2CC18C2E07D002C7989 /* Frist.mp3 */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		1808C35B18C75C51008C96A0 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				1808C35718C75A13008C96A0 /* DataSave.h */,
+				1808C35818C75A13008C96A0 /* DataSave.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		1808C35C18C75C5E008C96A0 /* Ctl */ = {
+			isa = PBXGroup;
+			children = (
+				18FB271018B994210051C98B /* ViewController.h */,
+				18FB271118B994210051C98B /* ViewController.m */,
+				18FB271D18B9A8230051C98B /* AddClockCtl.h */,
+				18FB271E18B9A8230051C98B /* AddClockCtl.m */,
+				1815F70D18BF907C002BF5A1 /* MusicCtl.m */,
+				1815F70C18BF906C002BF5A1 /* MusicCtl.h */,
+			);
+			name = Ctl;
+			sourceTree = "<group>";
+		};
+		18FB26EC18B994210051C98B = {
+			isa = PBXGroup;
+			children = (
+				182B1DBC18BB87C30049158C /* AVFoundation.framework */,
+				18FB26FE18B994210051C98B /* Clock */,
+				18FB26F718B994210051C98B /* Frameworks */,
+				18FB26F618B994210051C98B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		18FB26F618B994210051C98B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18FB26F518B994210051C98B /* Clock.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18FB26F718B994210051C98B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18FB26F818B994210051C98B /* UIKit.framework */,
+				18FB26FA18B994210051C98B /* Foundation.framework */,
+				18FB26FC18B994210051C98B /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		18FB26FE18B994210051C98B /* Clock */ = {
+			isa = PBXGroup;
+			children = (
+				18FB270718B994210051C98B /* AppDelegate.h */,
+				18FB270818B994210051C98B /* AppDelegate.m */,
+				1808C35C18C75C5E008C96A0 /* Ctl */,
+				1808C35B18C75C51008C96A0 /* Data */,
+				1808C35A18C75C39008C96A0 /* Resource */,
+				18FB26FF18B994210051C98B /* Supporting Files */,
+			);
+			path = Clock;
+			sourceTree = "<group>";
+		};
+		18FB26FF18B994210051C98B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				18FB271318B994210051C98B /* ViewController.xib */,
+				18FB271B18B9A8030051C98B /* AddClock.xib */,
+				18FB270018B994210051C98B /* Clock-Info.plist */,
+				18FB270118B994210051C98B /* InfoPlist.strings */,
+				18FB270418B994210051C98B /* main.m */,
+				18FB270618B994210051C98B /* Clock-Prefix.pch */,
+				18FB270A18B994210051C98B /* Default.png */,
+				18FB270C18B994210051C98B /* Default@2x.png */,
+				18FB270E18B994210051C98B /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18FB26F418B994210051C98B /* Clock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18FB271818B994210051C98B /* Build configuration list for PBXNativeTarget "Clock" */;
+			buildPhases = (
+				18FB26F118B994210051C98B /* Sources */,
+				18FB26F218B994210051C98B /* Frameworks */,
+				18FB26F318B994210051C98B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Clock;
+			productName = Clock;
+			productReference = 18FB26F518B994210051C98B /* Clock.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		18FB26ED18B994210051C98B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = apple;
+			};
+			buildConfigurationList = 18FB26F018B994210051C98B /* Build configuration list for PBXProject "Clock" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 18FB26EC18B994210051C98B;
+			productRefGroup = 18FB26F618B994210051C98B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18FB26F418B994210051C98B /* Clock */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18FB26F318B994210051C98B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18FB270318B994210051C98B /* InfoPlist.strings in Resources */,
+				18FB270B18B994210051C98B /* Default.png in Resources */,
+				18FB270D18B994210051C98B /* Default@2x.png in Resources */,
+				18FB270F18B994210051C98B /* Default-568h@2x.png in Resources */,
+				18FB271518B994210051C98B /* ViewController.xib in Resources */,
+				18FB271C18B9A8030051C98B /* AddClock.xib in Resources */,
+				188EB2CB18C2E075002C7989 /* Add.png in Resources */,
+				188EB2CE18C2E07D002C7989 /* Frist.mp3 in Resources */,
+				188EB2CF18C2E07D002C7989 /* Second.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18FB26F118B994210051C98B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18FB270518B994210051C98B /* main.m in Sources */,
+				18FB270918B994210051C98B /* AppDelegate.m in Sources */,
+				18FB271218B994210051C98B /* ViewController.m in Sources */,
+				18FB271F18B9A8230051C98B /* AddClockCtl.m in Sources */,
+				1815F70E18BF907C002BF5A1 /* MusicCtl.m in Sources */,
+				1808C35918C75A13008C96A0 /* DataSave.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		18FB270118B994210051C98B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18FB270218B994210051C98B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		18FB271318B994210051C98B /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18FB271418B994210051C98B /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		18FB271618B994210051C98B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		18FB271718B994210051C98B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		18FB271918B994210051C98B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Clock/Clock-Prefix.pch";
+				INFOPLIST_FILE = "Clock/Clock-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		18FB271A18B994210051C98B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Clock/Clock-Prefix.pch";
+				INFOPLIST_FILE = "Clock/Clock-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18FB26F018B994210051C98B /* Build configuration list for PBXProject "Clock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18FB271618B994210051C98B /* Debug */,
+				18FB271718B994210051C98B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18FB271818B994210051C98B /* Build configuration list for PBXNativeTarget "Clock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18FB271918B994210051C98B /* Debug */,
+				18FB271A18B994210051C98B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 18FB26ED18B994210051C98B /* Project object */;
+}
