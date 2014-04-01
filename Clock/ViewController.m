@@ -22,15 +22,13 @@ static NSString * const kRootClockDate = @"RootClockDate";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSDictionary * dic = [NSDictionary dictionaryWithObjectsAndKeys:@"",ClockTime, nil];
-    self.array = [NSArray arrayWithObjects:@"Add Clock", nil];
-//    [self.array writeToFile:[self dataFilePath] atomically:YES];
-   
+
+    self.array = [NSMutableArray arrayWithObjects:@"Add Clock", nil];
     self._addClockCtl = [[AddClockCtl alloc] initWithNibName:@"AddClock" bundle:nil];
     self._addClockCtl.delegate = self;
     self._clocksArray = [NSMutableArray array];
 
-//    self._clocksArray = [NSMutableArray arrayWithArray:[self getClockData]];
+    self._clocksArray = [NSMutableArray arrayWithArray:[self getClockData]];
     
 
 	// Do any additional setup after loading the view, typically from a nib.
@@ -44,7 +42,6 @@ static NSString * const kRootClockDate = @"RootClockDate";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSLog(@"%d",[self._clocksArray count]+1);
     return [self._clocksArray count]+1;
 }
 
@@ -64,13 +61,11 @@ static NSString * const kRootClockDate = @"RootClockDate";
     }else{
         NSDictionary * tDic = self._clocksArray[indexPath.row-1];
         cell.textLabel.text = [self clockCellTxt:[tDic objectForKey:ClockTime]];
-        cell.detailTextLabel.text = [self._addClockCtl getRepeatDetailStr:[tDic objectForKey:RepeatArray]];
+        cell.detailTextLabel.text = [self._addClockCtl getRepeatDetailStrWithInteger:[[tDic objectForKey:RepeatArray] integerValue]];
     }
     
     return cell;
 }
-
-
 
 //选中
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -85,20 +80,19 @@ static NSString * const kRootClockDate = @"RootClockDate";
     return @"clock";
 }
 
-- (void)clockInfo:(NSArray *)repeatArray musicName:(NSString *)musicName clockTime:(NSDate *)clockTime
+- (void)clockInfo:(NSInteger)repeatInter musicName:(NSString *)musicName clockTime:(NSDate *)clockTime
 {
-    [self setClocksDic:repeatArray musicName:musicName clockTime:clockTime];
+    [self setClocksDic:repeatInter musicName:musicName clockTime:clockTime];
 }
 
-- (void)setClocksDic:(NSArray *)repeatArray musicName:(NSString *)musicName clockTime:(NSDate *)clockTime
+- (void)setClocksDic:(NSInteger)repeatInter musicName:(NSString *)musicName clockTime:(NSDate *)clockTime
 {
     NSDictionary * tClockDic = [NSDictionary dictionaryWithObjectsAndKeys:
-                                repeatArray,RepeatArray,
+                                [NSNumber numberWithInteger:repeatInter],RepeatArray,
                                 musicName,MusicFilePath,
                                 clockTime,ClockTime,nil];
-    tClockDic = nil;
-    NSDictionary * ttClockDic = [NSDictionary dictionaryWithObjectsAndKeys:[[NSIndexPath alloc] initWithIndex:0],RepeatArray, nil];
-    [self._clocksArray addObject:ttClockDic];
+
+    [self._clocksArray addObject:tClockDic];
     [self saveData];
     [self setClockWithDic:tClockDic];
     [self._tableView reloadData];
@@ -171,15 +165,28 @@ static NSString * const kRootClockDate = @"RootClockDate";
     if (hour >= 12) {
         tClockCellTxt = @"PM";
     }
+    NSString * tHourStr = @"";
+    if (hour < 10) {
+        tHourStr = [NSString stringWithFormat:@"0%d",hour];
+    }else{
+        tHourStr = [NSString stringWithFormat:@"%d",hour];
+    }
     
-    tClockCellTxt = [NSString stringWithFormat:@"%@ %d:%d",tClockCellTxt,hour,min];
+    NSString * tMinStr = @"";
+    if (min < 10) {
+        tMinStr = [NSString stringWithFormat:@"0%d",min];
+    }else{
+        tMinStr = [NSString stringWithFormat:@"%d",min];
+    }
+    
+    tClockCellTxt = [NSString stringWithFormat:@"%@ %@:%@",tClockCellTxt,tHourStr,tMinStr];
     return tClockCellTxt;
 }
 
 - (IBAction)exit:(id)sender
 {
     [self saveData];
-//    exit(0);
+    exit(0);
 }
 
 - (void)playMusic
@@ -220,24 +227,25 @@ static NSString * const kRootClockDate = @"RootClockDate";
 - (void)setClockWithDic:(NSDictionary *)dic
 {
     NSDate      * tDate = [dic objectForKey:ClockTime];
-    NSArray     * tReapeatArray = [dic objectForKey:RepeatArray];
+    NSInteger    tRepeatInteger = [[dic objectForKey:RepeatArray] integerValue];
     NSString    * tMusicName = [dic objectForKey:MusicFilePath];
     
     NSInteger  tWeekDay = [self getWeekdayWithDate:tDate];
     NSInteger  tRepeatWeekDay = 0;
 
-    for (NSIndexPath *index in tReapeatArray) {
+    for (int index = 0; index < 7; index++) {
         NSDate * clockDate = tDate;
-        NSInteger           integer = [index indexAtPosition:1];
-        if (integer + 1 >= tWeekDay) {
-            tRepeatWeekDay = integer - tWeekDay + 2;
-        }else{
-            tRepeatWeekDay = integer + 8 - tWeekDay;
+        if ([self._addClockCtl getN:index integer:tRepeatInteger]) {
+            if (index + 1 >= tWeekDay) {
+                tRepeatWeekDay = index - tWeekDay + 2;
+            }else{
+                tRepeatWeekDay = index + 8 - tWeekDay;
+            }
+            
+            clockDate = [tDate dateByAddingTimeInterval:tRepeatWeekDay*24*60*60];
+            
+            [self setClockWithTime:clockDate repeat:TRUE musicName:tMusicName];
         }
-        
-        clockDate = [tDate dateByAddingTimeInterval:tRepeatWeekDay*24*60*60];
-        
-        [self setClockWithTime:clockDate repeat:TRUE musicName:tMusicName];
     }
 }
 
@@ -253,22 +261,8 @@ static NSString * const kRootClockDate = @"RootClockDate";
 - (void)saveData
 {
     NSString * tFilePath = [self dataFilePath];
-//    DataSave * tDataSave = [[DataSave alloc] init];
-//    tDataSave.clockDates = self._clocksArray;
-//    NSMutableData * tData = [[NSMutableData alloc] init];
-//    NSKeyedArchiver * tArchiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:tData];
-//    [tArchiver encodeObject:tDataSave forKey:kRootClockDate];
-//    [tArchiver finishEncoding];
     
-    [[[NSArray alloc ]initWithArray:self._clocksArray] writeToFile:[self dataFilePath] atomically:YES];
-    NSArray * arr = [NSArray arrayWithContentsOfFile:[self dataFilePath]];
-    NSLog(@"%@",[arr objectAtIndex:0]);
-    return;
-    NSArray * tSaveArray = [NSArray arrayWithArray:self._clocksArray];
-    [tSaveArray writeToFile:[self dataFilePath] atomically:YES];
-
-    NSArray * a = [NSArray arrayWithContentsOfFile:[self dataFilePath]];
-   // [tData writeToFile:tFilePath atomically:YES];
+    [[[NSArray alloc ]initWithArray:self._clocksArray] writeToFile:tFilePath atomically:YES];
     
 }
 
@@ -276,16 +270,8 @@ static NSString * const kRootClockDate = @"RootClockDate";
 {
     NSLog(@"get data");
     NSString    * tFilePath = [self dataFilePath];
-//    NSData      * tData = [[NSMutableData alloc] initWithContentsOfFile:tFilePath];
-//    NSKeyedUnarchiver * tUnarchiver = [[NSKeyedUnarchiver alloc] initForReadingWithData:tData];
-//    DataSave * tDataSave = [tUnarchiver decodeObjectForKey:kRootClockDate];
-//    [tUnarchiver finishDecoding];
     NSArray * arry = [NSArray arrayWithContentsOfFile:tFilePath];
     return  arry;
-//    if (!tDataSave.clockDates) {
-//        return [NSArray array];
-//    }
-//    
-//    return tDataSave.clockDates;
+
 }
 @end

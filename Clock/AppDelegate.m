@@ -20,6 +20,8 @@
     [super dealloc];
 }
 
+
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
@@ -66,6 +68,7 @@
 
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
     
+    NSLog(@"sdfsf");
     NSDictionary * tClockDic = [notification userInfo];
     
     

@@ -108,7 +108,9 @@
 {
     
     if (_showType == None) {
-        [_delegate clockInfo:self._repeatSelectArray musicName:self._musicName clockTime:self._dataPicker.date];
+        [_delegate clockInfo:self._repeatInteger musicName:self._musicName clockTime:self._dataPicker.date];
+        self._repeatDetailStr = @"";
+        [self._tableView reloadData];
         [self.view removeFromSuperview];
     }
     
@@ -145,8 +147,11 @@
 {
     self._repeatDetailStr = @"";
     
-    if ([selectArray count] == 7) {
+    self._repeatInteger = 0;
+    
+    if ([selectArray count] == 7 || [selectArray count] == 0) {
         self._repeatDetailStr = @"Every Day";
+        self._repeatInteger=1111111;
         return self._repeatDetailStr;
     }
     
@@ -156,24 +161,31 @@
         switch (integer) {
             case 0:
                 self._repeatDetailStr = [NSString stringWithFormat:@"Mon %@",self._repeatDetailStr];
+                self._repeatInteger = self._repeatInteger + 1;
                 break;
             case 1:
                 self._repeatDetailStr = [NSString stringWithFormat:@"Tue %@",self._repeatDetailStr];
+                self._repeatInteger = self._repeatInteger + 10;
                 break;
             case 2:
                 self._repeatDetailStr = [NSString stringWithFormat:@"Wed %@",self._repeatDetailStr];
+                self._repeatInteger = self._repeatInteger + 100;
                 break;
             case 3:
                 self._repeatDetailStr = [NSString stringWithFormat:@"Thu %@",self._repeatDetailStr];
+                self._repeatInteger = self._repeatInteger + 1000;
                 break;
             case 4:
                 self._repeatDetailStr = [NSString stringWithFormat:@"Fri %@",self._repeatDetailStr];
+                self._repeatInteger = self._repeatInteger + 10000;
                 break;
             case 5:
                 self._repeatDetailStr = [NSString stringWithFormat:@"Sta %@",self._repeatDetailStr];
+                self._repeatInteger = self._repeatInteger + 100000;
                 break;
             case 6:
                 self._repeatDetailStr = [NSString stringWithFormat:@"Sun %@",self._repeatDetailStr];
+                self._repeatInteger = self._repeatInteger + 1000000;
                 break;
                 
             default:
@@ -181,6 +193,41 @@
         }
     }
     return self._repeatDetailStr;
+}
+
+- (NSString *)getRepeatDetailStrWithInteger:(NSInteger)integer
+{
+    NSString * tRepeatDetailStr = @"";
+    
+    if ([self getN:0 integer:integer]) {
+        tRepeatDetailStr = [NSString stringWithFormat:@"Mon %@",tRepeatDetailStr];
+    }
+    
+    if ([self getN:1 integer:integer]) {
+        tRepeatDetailStr = [NSString stringWithFormat:@"Tue %@",tRepeatDetailStr];
+    }
+    
+    if ([self getN:2 integer:integer]) {
+        tRepeatDetailStr = [NSString stringWithFormat:@"Wed %@",tRepeatDetailStr];
+    }
+    
+    if ([self getN:3 integer:integer]) {
+        tRepeatDetailStr = [NSString stringWithFormat:@"Thu %@",tRepeatDetailStr];
+    }
+    
+    if ([self getN:4 integer:integer]) {
+        tRepeatDetailStr = [NSString stringWithFormat:@"Fri %@",tRepeatDetailStr];
+    }
+    
+    if ([self getN:5 integer:integer]) {
+        tRepeatDetailStr = [NSString stringWithFormat:@"Sta %@",tRepeatDetailStr];
+    }
+    
+    if ([self getN:6 integer:integer]) {
+        tRepeatDetailStr = [NSString stringWithFormat:@"Sun %@",tRepeatDetailStr];
+    }
+    
+    return tRepeatDetailStr;
 }
 
 
@@ -201,5 +248,17 @@
             break;
     }
     return self._musicName;
+}
+
+
+- (BOOL)getN:(int)N integer:(int)integer
+{
+    if (N > 1) {
+        integer = integer /(10 * (N-1));
+    }
+    if (integer%10 != 0) {
+        return true;
+    }
+    return false;
 }
 @end

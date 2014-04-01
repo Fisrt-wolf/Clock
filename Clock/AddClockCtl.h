@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @protocol AddClockCtlDelegate
-- (void)clockInfo:(NSArray *)repeatArray musicName:(NSString *)musicName clockTime:(NSDate *)clockTime;
+- (void)clockInfo:(NSInteger)repeatInter musicName:(NSString *)musicName clockTime:(NSDate *)clockTime;
 @end
 enum{
     None,
@@ -33,6 +33,7 @@ typedef NSInteger TableViewType;
 @property(copy,nonatomic)NSString   * _repeatDetailStr;
 @property(copy,nonatomic)NSString   * _musicName;
 @property(copy,nonatomic)NSDate     * _date;
+@property(nonatomic)int             _repeatInteger;
 
 @property(copy,nonatomic)NSMutableArray *_repeatSelectArray;
 @property(copy,nonatomic)NSIndexPath    *_musicIndexPath;
@@ -42,5 +43,6 @@ typedef NSInteger TableViewType;
 - (IBAction)save:(id)sender;
 
 - (NSString *)getRepeatDetailStr:(NSArray *)selectArray;
-
+- (NSString *)getRepeatDetailStrWithInteger:(NSInteger)integer;
+- (BOOL)getN:(int)N integer:(int)integer;
 @end

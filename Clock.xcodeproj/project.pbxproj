@@ -190,6 +190,11 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = apple;
+				TargetAttributes = {
+					18FB26F418B994210051C98B = {
+						DevelopmentTeam = 8Z3L9CY246;
+					};
+				};
 			};
 			buildConfigurationList = 18FB26F018B994210051C98B /* Build configuration list for PBXProject "Clock" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -322,10 +327,13 @@
 		18FB271918B994210051C98B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: BBMAX CO., LTD. (8Z3L9CY246)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Clock/Clock-Prefix.pch";
 				INFOPLIST_FILE = "Clock/Clock-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "88AE8FBC-9C6A-4AA8-862F-28AA49D11497";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -333,10 +341,13 @@
 		18FB271A18B994210051C98B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: BBMAX CO., LTD. (8Z3L9CY246)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Clock/Clock-Prefix.pch";
 				INFOPLIST_FILE = "Clock/Clock-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "88AE8FBC-9C6A-4AA8-862F-28AA49D11497";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
