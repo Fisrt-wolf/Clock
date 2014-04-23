@@ -72,6 +72,10 @@ static NSString * const kRootClockDate = @"RootClockDate";
 {
     if (indexPath.row == 0) {
         [self.view addSubview:self._addClockCtl.view];
+    }else{
+        UIAlertView * tAlertView = [[UIAlertView alloc] initWithTitle:@"Tip" message:@"Are you want to delete it !" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok", nil];
+        NSInteger inter = [tAlertView show];
+        
     }
 }
 

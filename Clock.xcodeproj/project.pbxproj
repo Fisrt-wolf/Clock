@@ -10,6 +10,7 @@
 		1808C35918C75A13008C96A0 /* DataSave.m in Sources */ = {isa = PBXBuildFile; fileRef = 1808C35818C75A13008C96A0 /* DataSave.m */; };
 		1815F70E18BF907C002BF5A1 /* MusicCtl.m in Sources */ = {isa = PBXBuildFile; fileRef = 1815F70D18BF907C002BF5A1 /* MusicCtl.m */; };
 		182B1DBD18BB87C30049158C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 182B1DBC18BB87C30049158C /* AVFoundation.framework */; };
+		185FBBEA18EAD09F00E76A43 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 185FBBE918EAD09F00E76A43 /* icon.png */; };
 		188EB2CB18C2E075002C7989 /* Add.png in Resources */ = {isa = PBXBuildFile; fileRef = 188EB2CA18C2E075002C7989 /* Add.png */; };
 		188EB2CE18C2E07D002C7989 /* Frist.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 188EB2CC18C2E07D002C7989 /* Frist.mp3 */; };
 		188EB2CF18C2E07D002C7989 /* Second.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 188EB2CD18C2E07D002C7989 /* Second.mp3 */; };
@@ -34,6 +35,7 @@
 		1815F70C18BF906C002BF5A1 /* MusicCtl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicCtl.h; sourceTree = "<group>"; };
 		1815F70D18BF907C002BF5A1 /* MusicCtl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicCtl.m; sourceTree = "<group>"; };
 		182B1DBC18BB87C30049158C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		185FBBE918EAD09F00E76A43 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = Resource/icon.png; sourceTree = "<group>"; };
 		188EB2CA18C2E075002C7989 /* Add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Add.png; path = Resource/Add.png; sourceTree = "<group>"; };
 		188EB2CC18C2E07D002C7989 /* Frist.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Frist.mp3; path = Resource/Frist.mp3; sourceTree = "<group>"; };
 		188EB2CD18C2E07D002C7989 /* Second.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Second.mp3; path = Resource/Second.mp3; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 		1808C35A18C75C39008C96A0 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				185FBBE918EAD09F00E76A43 /* icon.png */,
 				188EB2CA18C2E075002C7989 /* Add.png */,
 				188EB2CD18C2E07D002C7989 /* Second.mp3 */,
 				188EB2CC18C2E07D002C7989 /* Frist.mp3 */,
@@ -224,6 +227,7 @@
 				18FB270F18B994210051C98B /* Default-568h@2x.png in Resources */,
 				18FB271518B994210051C98B /* ViewController.xib in Resources */,
 				18FB271C18B9A8030051C98B /* AddClock.xib in Resources */,
+				185FBBEA18EAD09F00E76A43 /* icon.png in Resources */,
 				188EB2CB18C2E075002C7989 /* Add.png in Resources */,
 				188EB2CE18C2E07D002C7989 /* Frist.mp3 in Resources */,
 				188EB2CF18C2E07D002C7989 /* Second.mp3 in Resources */,
